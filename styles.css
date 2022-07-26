@@ -1,0 +1,9 @@
+#grid {
+    display: flex;
+    width: 900px;
+    height: 900px;
+}
+
+.newDiv {
+border: 1px solid black;
+}
