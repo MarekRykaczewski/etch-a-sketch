@@ -1,11 +1,13 @@
 #grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     width: 900px;
     height: 900px;
 }
 
-.newDiv {
+.cell {
 border: 1px solid black;
+width: auto;
+height: auto;
 }

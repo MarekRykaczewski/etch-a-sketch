@@ -2,11 +2,14 @@ const cell = document.createElement('div');
 cell.classList.add('cell');
 
 
-function makeGrid(n) {
+function makeRow(n) {
+    let newDimensions = 900 / n
+    cell.style.width= newDimensions + 'px'
+    cell.style.height= newDimensions + 'px'
     for (let i = 0; i < n; i++) {
         grid.appendChild(cell.cloneNode(true));
     }
     
 }
 
-makeGrid(3)
+makeRow(3)
