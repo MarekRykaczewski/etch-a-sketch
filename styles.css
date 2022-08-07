@@ -1,3 +1,25 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 20px;
+    top: 50%;
+    left: 50%;
+    margin-top: -480px;
+    margin-left: -480px;
+}
+
 #grid {
     display: flex;
     flex-direction: column;
