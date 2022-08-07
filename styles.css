@@ -14,10 +14,10 @@ flex: auto;
 .cell {
 border: 1px solid black;
 flex: auto;
-transition: background-color 0.3s ease-in-out;
+/* transition: background-color 0.2s ease-in-out; */
 }
 
 .cell:hover {
     background-color: black;
-    transition: background-color 0.3s ease-in-out;
+    /* transition: background-color 0.2s ease-in-out; */
 }
