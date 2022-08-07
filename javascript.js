@@ -11,4 +11,4 @@ for (let i = 0; i < n; i++) {
 }
 }
 
-makeGrid(5)
+makeGrid(16)
