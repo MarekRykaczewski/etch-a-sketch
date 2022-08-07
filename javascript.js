@@ -1,15 +1,14 @@
-const newRow = document.createElement('div');
-newRow.classList.add('newRow');
-
-
-function makeRow(n) {
-    let newDimensions = 900 / n
-    newRow.style.width= newDimensions + 'px'
-    newRow.style.height= newDimensions + 'px'
-    for (let i = 0; i < n; i++) {
-        grid.appendChild(newRow.cloneNode(true));
+function makeGrid(n) {
+for (let i = 0; i < n; i++) {
+    let row = document.createElement('div')
+    row.className = 'row'
+    for (let j = 0; j < n; j++) {
+        let cell = document.createElement('div')
+        cell.className = 'cell'
+        row.appendChild(cell)
     }
-    
+    document.getElementById('grid').appendChild(row);
+}
 }
 
-makeRow(3)
+makeGrid(5)
