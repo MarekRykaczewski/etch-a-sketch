@@ -1,7 +1,6 @@
 #grid {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     width: 900px;
     height: 900px;
 }
@@ -9,10 +8,10 @@
 .row {
 display: flex;
 flex-direction: row;
+flex: auto;
 }
 
 .cell {
 border: 1px solid black;
-width: 100px;
-height: 100px;
+flex: auto;
 }
