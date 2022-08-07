@@ -16,8 +16,8 @@ body {
     gap: 20px;
     top: 50%;
     left: 50%;
-    margin-top: -480px;
-    margin-left: -480px;
+    margin-top: -450px;
+    margin-left: -250px;
 }
 
 h1 {
@@ -29,8 +29,8 @@ h1 {
 #grid {
     display: flex;
     flex-direction: column;
-    width: 960px;
-    height: 960px;
+    width: 500px;
+    height: 500px;
 }
 
 .row {
