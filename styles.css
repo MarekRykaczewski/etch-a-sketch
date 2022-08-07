@@ -1,6 +1,6 @@
 #grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 1;
     width: 900px;
     height: 900px;
