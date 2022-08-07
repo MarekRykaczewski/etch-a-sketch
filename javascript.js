@@ -1,13 +1,13 @@
-const cell = document.createElement('div');
-cell.classList.add('cell');
+const newRow = document.createElement('div');
+newRow.classList.add('newRow');
 
 
 function makeRow(n) {
     let newDimensions = 900 / n
-    cell.style.width= newDimensions + 'px'
-    cell.style.height= newDimensions + 'px'
+    newRow.style.width= newDimensions + 'px'
+    newRow.style.height= newDimensions + 'px'
     for (let i = 0; i < n; i++) {
-        grid.appendChild(cell.cloneNode(true));
+        grid.appendChild(newRow.cloneNode(true));
     }
     
 }
