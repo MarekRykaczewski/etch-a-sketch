@@ -20,6 +20,12 @@ body {
     margin-left: -480px;
 }
 
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Nunito', sans-serif;
+}
+
 #grid {
     display: flex;
     flex-direction: column;
