@@ -34,8 +34,6 @@ function removeAllChildNodes(parent) {
     }
 }
 
-
-
 let slider = document.getElementById("gridRange");
 let output = document.getElementById("sliderOutput");
 output.innerHTML = slider.value; // Display the default slider value
@@ -45,6 +43,17 @@ slider.onmouseup = function() {
   output.innerHTML = this.value;
   makeGrid(slider.value)
 }
+
+let clear = document.getElementById("clearButton")
+
+clear.onclick = function() {
+    // makeGrid(slider.value) -- doing this is super slow
+    let cells = document.getElementsByClassName("cell")
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor="darkgray"
+    }
+}
+
 
 
 makeGrid(slider.value)
