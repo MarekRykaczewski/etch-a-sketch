@@ -14,11 +14,11 @@ for (let i = 0; i < n; i++) {
         }); 
         cell.addEventListener('mousemove', function (event) {
             if (isMouseDown) {
-                cell.style.backgroundColor = 'black'
+                cell.style.backgroundColor = 'gray'
             }
         });
         cell.addEventListener('mousedown', function (event) {
-            cell.style.backgroundColor = 'black'
+            cell.style.backgroundColor = 'gray'
         });
         row.appendChild(cell)
     }
@@ -26,4 +26,4 @@ for (let i = 0; i < n; i++) {
 }
 }
 
-makeGrid(10)
+makeGrid(32)

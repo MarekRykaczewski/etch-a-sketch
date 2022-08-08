@@ -1,5 +1,4 @@
 body {
-    height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -17,7 +16,13 @@ body {
     top: 50%;
     left: 50%;
     margin-top: -450px;
-    margin-left: -250px;
+    margin-left: -450px;
+    background-color: red;
+    border-radius: 25px;
+    width: 1100px;
+    height: 700px;
+    align-items: center;
+    gap: 0;
 }
 
 h1 {
@@ -29,23 +34,26 @@ h1 {
 #grid {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 550px;
     height: 500px;
+    border: 10px solid black;
+    border-radius: 15px;
 }
 
 .row {
 display: flex;
 flex-direction: row;
 flex: auto;
+background-color: darkgray
 }
 
 .cell {
-border: 1px solid black;
+/* border: 1px solid black; */
 flex: auto;
 transition: background-color 0.1s ease-in-out;
 }
 
 .cell:hover {
-    background-color: black;
+    background-color: gray;
     transition: background-color 0.1s ease-in-out;
 }
