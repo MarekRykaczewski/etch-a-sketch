@@ -27,3 +27,12 @@ for (let i = 0; i < n; i++) {
 }
 
 makeGrid(50)
+
+let slider = document.getElementById("gridRange");
+let output = document.getElementById("sliderOutput");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
