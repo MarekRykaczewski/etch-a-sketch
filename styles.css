@@ -4,10 +4,10 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #container {
+    margin-top: -300px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
