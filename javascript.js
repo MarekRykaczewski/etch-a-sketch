@@ -26,4 +26,4 @@ for (let i = 0; i < n; i++) {
 }
 }
 
-makeGrid(32)
+makeGrid(50)
