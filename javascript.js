@@ -62,13 +62,14 @@ toggleGridlines.onclick = function() {
         gridToggle = true;
         let cells = document.getElementsByClassName("cell")
         for (let i = 0; i < cells.length; i++) {
-            cells[i].style.border="1px solid gray"
+            cells[i].style.borderTop="1px solid gray"
+            cells[i].style.borderLeft="1px solid gray"
         }
     } else {
         gridToggle = false;
         let cells = document.getElementsByClassName("cell")
         for (let i = 0; i < cells.length; i++) {
-            cells[i].style.border="0px solid gray"
+            cells[i].style.border="0px"
         }
     }
 
