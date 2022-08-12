@@ -1,3 +1,6 @@
+// create n rows and append n cells to each row
+// listeners for drawing and adding styles
+
 function makeGrid(n) {
     const container = document.querySelector('#grid');
     removeAllChildNodes(container)
@@ -28,7 +31,7 @@ for (let i = 0; i < n; i++) {
 }
 }
 
-
+// removes child nodes while there are any left
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
@@ -58,6 +61,8 @@ clear.onclick = function() {
 
 let toggleGridlines = document.getElementById("gridlinesButton")
 let gridToggle = false;
+
+// loop through every cell and apply / remove border styling
 
 toggleGridlines.onclick = function() {
     if (gridToggle == false) {
