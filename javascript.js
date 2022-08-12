@@ -28,6 +28,8 @@ for (let i = 0; i < n; i++) {
 }
 }
 
+
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
