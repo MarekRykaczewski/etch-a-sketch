@@ -19,11 +19,11 @@ for (let i = 0; i < n; i++) {
         }); 
         cell.addEventListener('mousemove', function (event) {
             if (isMouseDown) {
-                cell.style.backgroundColor = 'gray'
+                cell.style.backgroundColor = colorPick.value
             }
         });
         cell.addEventListener('mousedown', function (event) {
-            cell.style.backgroundColor = 'gray'
+            cell.style.backgroundColor = colorPick.value
         });
         row.appendChild(cell)
     }
@@ -82,5 +82,6 @@ toggleGridlines.onclick = function() {
 
 }
 
+let colorPick = document.getElementById("colorPicker")
 
 makeGrid(slider.value)
