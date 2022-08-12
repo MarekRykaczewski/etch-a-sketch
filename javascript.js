@@ -43,6 +43,8 @@ let slider = document.getElementById("gridRange");
 let output = document.getElementById("sliderOutput");
 output.innerHTML = slider.value; // Display the default slider value
 
+let gridBox = document.querySelector('#grid') 
+
 // Update the current slider value (each time you drag the slider handle)
 slider.onmouseup = function() {
   output.innerHTML = this.value;
@@ -53,6 +55,9 @@ let clear = document.getElementById("clearButton")
 
 clear.onclick = function() {
     // makeGrid(slider.value) -- doing this is super slow
+    gridBox.classList.remove('shake'); // reset animation
+    void gridBox.offsetWidth; // trigger reflow
+    gridBox.classList.add('shake'); // start animation
     let cells = document.getElementsByClassName("cell")
     for (let i = 0; i < cells.length; i++) {
         cells[i].style.backgroundColor="darkgray"
@@ -67,13 +72,17 @@ let gridToggle = false;
 toggleGridlines.onclick = function() {
     if (gridToggle == false) {
         gridToggle = true;
+        // avoids overlap with cell border
+        gridBox.style.borderTop="0px"
+        gridBox.style.borderLeft="0px"
         let cells = document.getElementsByClassName("cell")
         for (let i = 0; i < cells.length; i++) {
-            cells[i].style.borderTop="1px solid gray"
-            cells[i].style.borderLeft="1px solid gray"
+            cells[i].style.borderTop="1px solid #666666"
+            cells[i].style.borderLeft="1px solid #666666"
         }
     } else {
         gridToggle = false;
+        gridBox.style.border="1px solid #666666"
         let cells = document.getElementsByClassName("cell")
         for (let i = 0; i < cells.length; i++) {
             cells[i].style.border="0px"
