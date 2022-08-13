@@ -48,6 +48,9 @@ button {
 
 button:hover {
     transform: scale(1.05);
+}
+
+#clearButton:hover {
     background-color: #666666;
     color: white;
 }
