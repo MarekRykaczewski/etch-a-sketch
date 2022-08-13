@@ -83,6 +83,7 @@ let gridToggle = false;
 toggleGridlines.onclick = function() {
     if (gridToggle == false) {
         gridToggle = true;
+        toggleGridlines.classList.add("buttonClicked")
         // avoids overlap with cell border
         gridBox.style.borderTop="0px"
         gridBox.style.borderLeft="0px"
@@ -93,6 +94,7 @@ toggleGridlines.onclick = function() {
         }
     } else {
         gridToggle = false;
+        toggleGridlines.classList.remove("buttonClicked")
         gridBox.style.border="1px solid #666666"
         let cells = document.getElementsByClassName("cell")
         for (let i = 0; i < cells.length; i++) {
@@ -117,9 +119,11 @@ let rainbowOn = false
 toggleRainbow.onclick = function() {
 if (rainbowOn == false) {
     rainbowOn = true;
+    toggleRainbow.classList.add("buttonClicked")
 } else {
     rainbowOn = false;
     brushColor = colorPick.value
+    toggleRainbow.classList.remove("buttonClicked")
 }
 }
 
