@@ -4,6 +4,9 @@
 function makeGrid(n) {
     const container = document.querySelector('#grid');
     removeAllChildNodes(container)
+
+
+    
 for (let i = 0; i < n; i++) {
     let row = document.createElement('div')
     row.className = 'row'
@@ -19,11 +22,19 @@ for (let i = 0; i < n; i++) {
         }); 
         cell.addEventListener('mousemove', function (event) {
             if (isMouseDown) {
-                cell.style.backgroundColor = colorPick.value
+                cell.style.backgroundColor = brushColor
+                if (rainbowOn == true) {
+                    let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+                    brushColor = randomColor;
+                }
             }
         });
         cell.addEventListener('mousedown', function (event) {
-            cell.style.backgroundColor = colorPick.value
+            cell.style.backgroundColor = brushColor
+            if (rainbowOn == true) {
+                let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+                brushColor = randomColor;
+            }
         });
         row.appendChild(cell)
     }
@@ -92,5 +103,24 @@ toggleGridlines.onclick = function() {
 }
 
 let colorPick = document.getElementById("colorPicker")
+let brushColor = colorPick.value
+
+colorPick.onchange = function() {
+    brushColor = colorPick.value
+}
+
+// button to toggle if rainbowOn, if not revert to colorPick value
+
+let toggleRainbow = document.getElementById("rainbowButton")
+let rainbowOn = false
+
+toggleRainbow.onclick = function() {
+if (rainbowOn == false) {
+    rainbowOn = true;
+} else {
+    rainbowOn = false;
+    brushColor = colorPick.value
+}
+}
 
 makeGrid(slider.value)
